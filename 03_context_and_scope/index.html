@@ -564,18 +564,17 @@
 <h1 id="context-and-scope">Context and Scope</h1>
 <h2 id="business-context">Business Context</h2>
 <p>Das CarRent-System interagiert mit verschiedenen Akteuren und externen Systemen. Die folgende Grafik zeigt die wichtigsten Beziehungen:</p>
-<pre><code class="language-mermaid">C4Context
-    Person(customer, &quot;Kunde&quot;, &quot;Mietet Fahrzeuge über das System&quot;)
-    System(system, &quot;CarRent-System&quot;, &quot;Online-Plattform für Fahrzeugmiete&quot;)
-    System_Ext(pups, &quot;ParkingUnlockProSystem (PUPS)&quot;, &quot;Fahrzeugfreischaltung&quot;)
-    System_Ext(insurance, &quot;Versicherungs-Umsystem&quot;, &quot;Schadensabwicklung&quot;)
-    Person(admin, &quot;Mitarbeiter&quot;, &quot;Verwaltet Fahrzeuge und Verträge&quot;)
+<pre class="mermaid"><code>C4Context
+    Person(customer, "Kunde", "Mietet Fahrzeuge über das System")
+    System(system, "CarRent-System", "Online-Plattform für Fahrzeugmiete")
+    System_Ext(pups, "ParkingUnlockProSystem (PUPS)", "Fahrzeugfreischaltung")
+    System_Ext(insurance, "Versicherungs-Umsystem", "Schadensabwicklung")
+    Person(admin, "Mitarbeiter", "Verwaltet Fahrzeuge und Verträge")
 
-    Rel(customer, system, &quot;Reserviert, mietet, gibt Fahrzeuge zurück&quot;)
-    Rel(admin, system, &quot;Verwaltet System und Fahrzeuge&quot;)
-    Rel(system, pups, &quot;Fahrzeugfreischaltung bei Abholung&quot;)
-    Rel(system, insurance, &quot;Schadensmeldungen bei Rückgabe&quot;)
-</code></pre>
+    Rel(customer, system, "Reserviert, mietet, gibt Fahrzeuge zurück")
+    Rel(admin, system, "Verwaltet System und Fahrzeuge")
+    Rel(system, pups, "Fahrzeugfreischaltung bei Abholung")
+    Rel(system, insurance, "Schadensmeldungen bei Rückgabe")</code></pre>
 <p>Das CarRent-System steht im Zentrum und verbindet Kunden, Mitarbeitende und externe Systeme für einen reibungslosen Mietprozess.</p>
 <h2 id="technical-context">Technical Context</h2>
 <p>Das System wird als Webanwendung mit Backend und Datenbank betrieben. Externe Schnittstellen werden über APIs angebunden.</p>

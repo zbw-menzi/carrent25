@@ -630,20 +630,19 @@
 <h1 id="deployment-view">Deployment View</h1>
 <h2 id="infrastructure-level-1">Infrastructure Level 1</h2>
 <p>Das folgende Diagramm zeigt die beispielhafte Verteilung der System-Container auf die Infrastruktur:</p>
-<pre><code class="language-mermaid">C4Deployment
-    Node(browser, &quot;Browser&quot;, &quot;Kunde/Mitarbeiter&quot;)
-    Node(webserver, &quot;Webserver&quot;, &quot;Hostet Web-Frontend&quot;)
-    Node(appserver, &quot;App-Server&quot;, &quot;Hostet Backend/API&quot;)
-    Node(dbserver, &quot;DB-Server&quot;, &quot;Hostet Datenbank&quot;)
-    Node_Ext(pups, &quot;PUPS-System&quot;)
-    Node_Ext(insurance, &quot;Versicherungs-System&quot;)
+<pre class="mermaid"><code>C4Deployment
+    Node(browser, "Browser", "Kunde/Mitarbeiter")
+    Node(webserver, "Webserver", "Hostet Web-Frontend")
+    Node(appserver, "App-Server", "Hostet Backend/API")
+    Node(dbserver, "DB-Server", "Hostet Datenbank")
+    Node_Ext(pups, "PUPS-System")
+    Node_Ext(insurance, "Versicherungs-System")
 
-    Rel(browser, webserver, &quot;HTTPS&quot;)
-    Rel(webserver, appserver, &quot;HTTPS&quot;)
-    Rel(appserver, dbserver, &quot;JDBC/ORM&quot;)
-    Rel(appserver, pups, &quot;REST/HTTPS&quot;)
-    Rel(appserver, insurance, &quot;REST/HTTPS&quot;)
-</code></pre>
+    Rel(browser, webserver, "HTTPS")
+    Rel(webserver, appserver, "HTTPS")
+    Rel(appserver, dbserver, "JDBC/ORM")
+    Rel(appserver, pups, "REST/HTTPS")
+    Rel(appserver, insurance, "REST/HTTPS")</code></pre>
 <p>Die Container werden auf dedizierten Servern oder Cloud-Ressourcen betrieben. Externe Systeme werden über das Internet angebunden.</p>
 <h2 id="infrastructure-level-2">Infrastructure Level 2</h2>
 <h3 id="_1"><em>\<Infrastructure Element 1></em></h3>

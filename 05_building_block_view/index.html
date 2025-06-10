@@ -714,19 +714,18 @@
 <h1 id="building-block-view">Building Block View</h1>
 <h2 id="whitebox-overall-system">Whitebox Overall System</h2>
 <p>Das CarRent-System besteht aus mehreren Containern, die jeweils eine zentrale Aufgabe übernehmen. Die folgende Grafik zeigt die wichtigsten Container und deren Beziehungen:</p>
-<pre><code class="language-mermaid">C4Container
-    System_Boundary(system, &quot;CarRent-System&quot;) {
-      Container(web, &quot;Web-Frontend&quot;, &quot;React/Vue/Angular&quot;, &quot;Nutzeroberfläche für Kunden und Mitarbeitende&quot;)
-      Container(api, &quot;Backend/API&quot;, &quot;Spring Boot/.NET/Node.js&quot;, &quot;Geschäftslogik und Schnittstellen&quot;)
-      ContainerDb(db, &quot;Datenbank&quot;, &quot;PostgreSQL/MySQL&quot;, &quot;Persistenz von Nutzern, Fahrzeugen, Reservierungen&quot;)
-      Container_Ext(pups, &quot;PUPS API&quot;, &quot;REST API&quot;, &quot;Fahrzeugfreischaltung&quot;)
-      Container_Ext(insurance, &quot;Versicherungs-API&quot;, &quot;REST API&quot;, &quot;Schadensabwicklung&quot;)
+<pre class="mermaid"><code>C4Container
+    System_Boundary(system, "CarRent-System") {
+      Container(web, "Web-Frontend", "React/Vue/Angular", "Nutzeroberfläche für Kunden und Mitarbeitende")
+      Container(api, "Backend/API", "Spring Boot/.NET/Node.js", "Geschäftslogik und Schnittstellen")
+      ContainerDb(db, "Datenbank", "PostgreSQL/MySQL", "Persistenz von Nutzern, Fahrzeugen, Reservierungen")
+      Container_Ext(pups, "PUPS API", "REST API", "Fahrzeugfreischaltung")
+      Container_Ext(insurance, "Versicherungs-API", "REST API", "Schadensabwicklung")
     }
-    Rel(web, api, &quot;REST/HTTPS&quot;)
-    Rel(api, db, &quot;JDBC/ORM&quot;)
-    Rel(api, pups, &quot;REST/HTTPS&quot;)
-    Rel(api, insurance, &quot;REST/HTTPS&quot;)
-</code></pre>
+    Rel(web, api, "REST/HTTPS")
+    Rel(api, db, "JDBC/ORM")
+    Rel(api, pups, "REST/HTTPS")
+    Rel(api, insurance, "REST/HTTPS")</code></pre>
 <p>Die Containerstruktur ermöglicht eine klare Trennung von Präsentation, Logik und Persistenz sowie die Anbindung externer Systeme.</p>
 <h2 id="level-2">Level 2</h2>
 <h3 id="white-box">White Box <em>\<building block 1></em></h3>
