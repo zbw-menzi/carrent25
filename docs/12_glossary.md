@@ -2,5 +2,5 @@
 
 | Term        | Definition        |
 |-------------|-------------------|
-| *\<Term-1>* | *\<definition-1>* |
-| *\<Term-2>* | *\<definition-2>* |
+| *&lt;Term-1&gt;* | *&lt;definition-1&gt;* |
+| *&lt;Term-2&gt;* | *&lt;definition-2&gt;* |

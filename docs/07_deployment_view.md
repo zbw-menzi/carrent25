@@ -24,16 +24,16 @@ Die Container werden auf dedizierten Servern oder Cloud-Ressourcen betrieben. Ex
 
 ## Infrastructure Level 2
 
-### *\<Infrastructure Element 1>*
+### *&lt;Infrastructure Element 1&gt;*
 
-*\<diagram + explanation>*
+*&lt;diagram + explanation&gt;*
 
-### *\<Infrastructure Element 2>*
+### *&lt;Infrastructure Element 2&gt;*
 
-*\<diagram + explanation>*
+*&lt;diagram + explanation&gt;*
 
 …
 
-### *\<Infrastructure Element n>*
+### *&lt;Infrastructure Element n&gt;*
 
-*\<diagram + explanation>*
+*&lt;diagram + explanation&gt;*
