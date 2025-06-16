@@ -10,3 +10,9 @@
 |-------------|----------------|--------------------|
 | *\<Role-1>* | *\<Contact-1>* | *\<Expectation-1>* |
 | *\<Role-2>* | *\<Contact-2>* | *\<Expectation-2>* |
+
+## File Reference
+
+``` title=".mkdocs.yml"
+--8<-- "mkdocs.yml"
+```
