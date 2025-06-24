@@ -2,6 +2,8 @@
 {
     public abstract class Entity : IEquatable<Entity>
     {
+        private readonly List<IDomainEvent> _domainEvents;
+
         protected Entity()
             : this(Guid.CreateVersion7())
         {
@@ -13,6 +15,13 @@
         }
 
         public Guid Id { get; }
+
+        public IReadOnlyList<IDomainEvent> DomainEvents => _domainEvents;
+
+        protected void RegisterDomainEvent(IDomainEvent domainEvent)
+        {
+            _domainEvents.Add(domainEvent);
+        }
 
         public static bool operator ==(Entity left, Entity right)
         {
