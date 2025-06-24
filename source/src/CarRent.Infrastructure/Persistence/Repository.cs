@@ -4,7 +4,7 @@
 
     using System;
 
-    internal abstract class Repository<T> : IRepository<T>
+    public abstract class Repository<T> : IRepository<T>
         where T : class, IAggregateRoot
     {
         private readonly CarRentContext _context;

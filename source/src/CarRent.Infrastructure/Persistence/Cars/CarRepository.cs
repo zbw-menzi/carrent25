@@ -9,7 +9,7 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    internal class CarRepository : Repository<Car>, ICarRepository
+    public class CarRepository : Repository<Car>, ICarRepository
     {
         public CarRepository(CarRentContext context)
             : base(context)
