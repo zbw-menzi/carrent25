@@ -4,7 +4,7 @@
 
     public abstract class Entity : IEquatable<Entity>
     {
-        private readonly List<IDomainEvent> _domainEvents;
+        private readonly List<IDomainEvent> _domainEvents = [];
 
         protected Entity()
             : this(Guid.CreateVersion7())
