@@ -7,7 +7,7 @@
     using System;
     using System.Threading.Tasks;
 
-    public class CarApi
+    public static class CarApi
     {
         //internal static async Task GetCars(HttpContext context)
         //{
