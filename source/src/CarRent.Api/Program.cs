@@ -39,7 +39,7 @@ namespace CarRent.Api
 
             app.MapGet("/cars", CarApi.GetCars);
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
