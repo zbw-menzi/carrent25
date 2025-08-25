@@ -11,6 +11,7 @@
 		</AssemblyAttribute>
 	</ItemGroup>
 	<ItemGroup>
+		<PackageReference Include="Mediator.Abstractions" Version="3.0.1" />
 		<PackageReference Include="Roslynator.Analyzers" Version="4.13.1">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
