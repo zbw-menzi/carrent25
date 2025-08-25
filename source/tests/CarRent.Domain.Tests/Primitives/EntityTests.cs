@@ -46,6 +46,31 @@
         }
 
         [Fact]
+        public void Equals_WithDifferentReference_ReturnsTrue()
+        {
+            // Arrange
+            var id = Guid.NewGuid();
+            var entity1 = new TestEntity(id);
+            var entity2 = new TestEntity(id);
+
+            // Act + Assert
+            entity1.Equals((object)entity2).Should().BeTrue();
+        }
+
+        [Fact]
+        public void Equals_WithDifferentReferenceDifferentID_ReturnsFalse()
+        {
+            // Arrange
+            var id1 = Guid.NewGuid();
+            var id2 = Guid.NewGuid();
+            var entity1 = new TestEntity(id1);
+            var entity2 = new TestEntity(id2);
+
+            // Act + Assert
+            entity1.Equals((object)entity2).Should().BeFalse();
+        }
+
+        [Fact]
         public void Equals_WithDifferentType_ReturnsFalse()
         {
             // Arrange

@@ -1,8 +1,10 @@
 ﻿namespace CarRent.Domain.Primitives
 {
+    using System.Diagnostics.CodeAnalysis;
+
     public abstract class Entity : IEquatable<Entity>
     {
-        private readonly List<IDomainEvent> _domainEvents;
+        private readonly List<IDomainEvent> _domainEvents = [];
 
         protected Entity()
             : this(Guid.CreateVersion7())
@@ -55,12 +57,17 @@
 
         public override bool Equals(object? obj)
         {
+            if (base.Equals(obj))
+            {
+                return true;
+            }
+
             if (obj is Entity entity)
             {
                 return Equals(entity);
             }
 
-            return base.Equals(obj);
+            return false;
         }
 
         public override int GetHashCode()
